@@ -3,7 +3,7 @@
   "max_articles_per_run": 1,
   "dry_run": true,
   "site_name": "Gujarat Bole Che",
-  "blogger_blog_id": "",
+  "blogger_blog_id": "8284105149051920126",
   "local_llm": {
     "base_url": "http://127.0.0.1:8080/v1",
     "model": "local-qwen"

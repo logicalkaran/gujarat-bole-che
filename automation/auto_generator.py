@@ -75,10 +75,10 @@ Return only HTML."""
             "model": CONFIG["local_llm"]["model"],
             "prompt": prompt,
             "temperature": 0.2,
-            "n_predict": 300,
+            "n_predict": 220,
             "stream": False,
         },
-        timeout=40,
+        timeout=90,
     )
     r.raise_for_status()
     return r.json()["choices"][0]["text"]
