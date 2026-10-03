@@ -4,8 +4,24 @@
 <head>
   <meta content='width=device-width, initial-scale=1' name='viewport'/>
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+  <meta expr:content='data:blog.metaDescription' name='description'/>
+  <meta content='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' name='robots'/>
+  <link expr:href='data:blog.canonicalUrl' rel='canonical'/>
+  <meta expr:content='data:blog.pageTitle' property='og:title'/>
+  <meta expr:content='data:blog.metaDescription' property='og:description'/>
+  <meta expr:content='data:blog.url' property='og:url'/>
+  <meta content='website' property='og:type'/>
+  <meta content='Gujarat Bole Che' property='og:site_name'/>
+  <meta content='summary_large_image' name='twitter:card'/>
+  <meta expr:content='data:blog.pageTitle' name='twitter:title'/>
+  <meta expr:content='data:blog.metaDescription' name='twitter:description'/>
   <title><data:blog.pageTitle/></title>
+  <link href='https://fonts.googleapis.com' rel='preconnect'/>
+  <link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
   <b:include data='blog' name='all-head-content'/>
+  <script type='application/ld+json'><![CDATA[
+{"@context":"https://schema.org","@type":"WebSite","name":"Gujarat Bole Che","url":"https://gujaratboleche.blogspot.com/","description":"Source-backed information on Gujarat, India, business, technology, finance and markets."}
+  ]]></script>
   <b:skin><![CDATA[
 :root{--bg:#f6f7fb;--card:#fff;--text:#172033;--muted:#64748b;--line:#e5e7eb;--accent:#e4572e;--accent2:#f4a261;--dark:#111827;--radius:18px;--shadow:0 10px 30px rgba(15,23,42,.07)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}a:hover{opacity:.82}
