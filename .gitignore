@@ -1,0 +1,6 @@
+growth/oauth/
+**/client_secret*.json
+**/token*.json
+.env
+*.log
+__pycache__/

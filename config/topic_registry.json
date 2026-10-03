@@ -1,0 +1,40 @@
+{
+  "site": {
+    "name": "Gujarat Bole Che",
+    "language": "en",
+    "publisher": "Blogger",
+    "policy": {
+      "no_auto_publish_without_review": true,
+      "no_copied_content": true,
+      "no_artificial_traffic": true,
+      "no_ad_click_manipulation": true
+    }
+  },
+  "pillars": [
+    {
+      "id": "gujarat-government",
+      "name": "Gujarat Government & Schemes",
+      "queries": ["Gujarat government schemes", "Gujarat government services", "Gujarat scheme eligibility"]
+    },
+    {
+      "id": "gujarat-msme",
+      "name": "Gujarat MSME & Business",
+      "queries": ["Udyam registration Gujarat", "Gujarat MSME schemes", "small business Gujarat"]
+    },
+    {
+      "id": "gujarat-education",
+      "name": "Gujarat Jobs & Education",
+      "queries": ["Gujarat government jobs", "Gujarat scholarships", "Gujarat exam information"]
+    },
+    {
+      "id": "gujarat-tourism",
+      "name": "Gujarat Tourism",
+      "queries": ["Gujarat tourist places", "Gujarat travel guide", "Gujarat weekend trips"]
+    },
+    {
+      "id": "ai-technology",
+      "name": "AI & Technology",
+      "queries": ["AI tutorials", "Android AI tools", "Python AI projects"]
+    }
+  ]
+}

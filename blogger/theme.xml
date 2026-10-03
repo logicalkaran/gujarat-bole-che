@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.0.0' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+  <title><data:blog.pageTitle/></title>
+  <b:include data='blog' name='all-head-content'/>
+  <b:skin><![CDATA[
+:root{--bg:#f6f7fb;--card:#fff;--text:#172033;--muted:#64748b;--line:#e5e7eb;--accent:#e4572e;--accent2:#f4a261;--dark:#111827;--radius:18px;--shadow:0 10px 30px rgba(15,23,42,.07)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}a:hover{opacity:.82}
+.gbc-wrap{max-width:1180px;margin:auto;padding:0 18px}.gbc-top{background:#111827;color:#e5e7eb;font-size:13px}.gbc-top .gbc-wrap{height:34px;display:flex;align-items:center;justify-content:space-between}
+.gbc-header{background:#fff;border-bottom:1px solid var(--line)}.gbc-brand{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0}.gbc-logo{font-size:28px;font-weight:900;letter-spacing:-.05em}.gbc-logo span{color:var(--accent)}.gbc-tag{color:var(--muted);font-size:13px}
+.gbc-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.gbc-nav .gbc-wrap{display:flex;gap:4px;overflow:auto}.gbc-nav a{padding:13px 15px;font-size:14px;font-weight:750;white-space:nowrap}.gbc-nav a:hover{color:var(--accent)}
+.gbc-hero{margin:22px 0;padding:30px;border-radius:24px;background:linear-gradient(135deg,#172033,#334155);color:#fff;box-shadow:var(--shadow)}.gbc-hero h1{margin:0 0 8px;font-size:clamp(28px,5vw,46px);line-height:1.05;letter-spacing:-.045em}.gbc-hero p{margin:0;max-width:720px;color:#dbe4f0}.gbc-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.gbc-pill{padding:7px 11px;border:1px solid rgba(255,255,255,.18);border-radius:999px;font-size:12px;color:#fff}
+.gbc-grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px}.gbc-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}.gbc-panel-title{padding:16px 18px;border-bottom:1px solid var(--line);font-weight:850}
+.gbc-search{display:flex;gap:8px;padding:16px}.gbc-search input{width:100%;border:1px solid var(--line);border-radius:13px;padding:12px 14px;font-size:15px;outline:0}.gbc-search input:focus{border-color:var(--accent)}
+.main .widget{margin:0}.blog-posts .date-outer,.blog-posts .post-outer{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);margin:0 0 18px;padding:0;overflow:hidden}.post{padding:24px}.post-title,.entry-title{font-size:clamp(22px,3vw,32px);line-height:1.18;letter-spacing:-.03em;margin:0 0 12px;font-weight:850}.post-title a,.entry-title a{color:var(--text)}.post-header-line-1,.post-info,.post-timestamp{font-size:13px;color:var(--muted)}.post-body{font-size:16px;color:#334155}.post-body img{max-width:100%;height:auto;border-radius:14px}.post-body a{color:var(--accent);text-decoration:underline}.post-footer{color:var(--muted)}
+.sidebar .widget{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-bottom:18px}.sidebar .title,.sidebar h2{margin-top:0;font-size:17px}
+.gbc-footer{margin-top:35px;background:#111827;color:#cbd5e1;padding:38px 0}.gbc-footer strong{color:#fff}.gbc-footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}.gbc-footer a{color:#e5e7eb}
+#gbc-mode{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 11px;cursor:pointer}.gbc-dark{--bg:#0b1220;--card:#111827;--text:#f8fafc;--muted:#94a3b8;--line:#263244}.gbc-dark .gbc-header,.gbc-dark .gbc-nav{background:#111827}.gbc-dark .post-body{color:#cbd5e1}.gbc-dark #gbc-mode{background:#111827;color:#fff;border-color:#263244}
+@media(max-width:820px){.gbc-grid{grid-template-columns:1fr}.gbc-tag{display:none}.gbc-footer-grid{grid-template-columns:1fr}.gbc-wrap{padding:0 12px}.post{padding:18px}.gbc-hero{padding:23px}.gbc-brand{padding:15px 0}}
+  ]]></b:skin>
+</head>
+<body>
+  <div class='gbc-top'><div class='gbc-wrap'><span>Gujarat • India • Business • Technology • Markets</span><button id='gbc-mode' type='button' aria-label='Toggle dark mode'>◐</button></div></div>
+  <header class='gbc-header'><div class='gbc-wrap gbc-brand'><a class='gbc-logo' expr:href='data:blog.homepageUrl'><span>Gujarat</span> Bole Che</a><span class='gbc-tag'>Useful stories. Clear information.</span></div></header>
+  <nav class='gbc-nav'><div class='gbc-wrap'>
+    <a expr:href='data:blog.homepageUrl'>Home</a><a href='/search/label/Gujarat'>Gujarat</a><a href='/search/label/Business'>Business</a><a href='/search/label/Markets'>Markets</a><a href='/search/label/Technology'>Technology</a><a href='/search/label/Finance'>Finance</a><a href='/search/label/Education'>Education</a><a href='/search/label/Travel'>Travel</a>
+  </div></nav>
+  <main class='gbc-wrap'>
+    <section class='gbc-hero'><h1>Gujarat Bole Che</h1><p>Fresh, useful information on Gujarat, India, business, technology, markets and everyday topics.</p><div class='gbc-pills'><span class='gbc-pill'>Gujarat</span><span class='gbc-pill'>Business</span><span class='gbc-pill'>Technology</span><span class='gbc-pill'>Markets</span></div></section>
+    <div class='gbc-grid'>
+      <section><div class='gbc-panel gbc-search'><input id='gbc-search' type='search' placeholder='Search articles…' aria-label='Search articles'/></div><b:section id='main' class='main' maxwidgets='1' showaddelement='no'><b:widget id='Blog1' type='Blog' locked='true' title='Latest Articles' version='2'/></b:section></section>
+      <aside class='sidebar'><b:section id='sidebar' class='sidebar' maxwidgets='6' showaddelement='yes'><b:widget id='HTML1' type='HTML' title='About Gujarat Bole Che' version='2'/><b:widget id='PopularPosts1' type='PopularPosts' title='Popular Posts' version='2'/><b:widget id='Label1' type='Label' title='Topics' version='2'/></b:section></aside>
+    </div>
+  </main>
+  <footer class='gbc-footer'><div class='gbc-wrap gbc-footer-grid'><div><strong>Gujarat Bole Che</strong><p>Information and original articles for readers in Gujarat and beyond.</p></div><div><strong>Explore</strong><p><a href='/p/about.html'>About</a><br/><a href='/p/contact.html'>Contact</a><br/><a href='/p/privacy-policy.html'>Privacy</a></p></div><div><strong>Information</strong><p><a href='/p/disclaimer.html'>Disclaimer</a><br/><a href='/feeds/posts/default'>RSS</a></p></div></div></footer>
+<script>
+(function(){var m=document.getElementById('gbc-mode');if(m){m.onclick=function(){document.documentElement.classList.toggle('gbc-dark');localStorage.setItem('gbc-dark',document.documentElement.classList.contains('gbc-dark')?'1':'0')};if(localStorage.getItem('gbc-dark')==='1')document.documentElement.classList.add('gbc-dark')}var q=document.getElementById('gbc-search');if(q){q.oninput=function(){var s=this.value.toLowerCase().trim();document.querySelectorAll('.post-outer,.date-outer').forEach(function(p){p.style.display=!s||p.innerText.toLowerCase().indexOf(s)>=0?'':'none'})}}})();
+</script>
+</body></html>

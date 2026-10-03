@@ -1,0 +1,40 @@
+{
+  "cadence_hours": 12,
+  "max_articles_per_run": 1,
+  "dry_run": true,
+  "site_name": "Gujarat Bole Che",
+  "blogger_blog_id": "",
+  "local_llm": {
+    "base_url": "http://127.0.0.1:8080/v1",
+    "model": "local-qwen"
+  },
+  "topics": [
+    {"id": "india-markets", "name": "Indian Markets", "queries": ["NIFTY 50 today", "SENSEX today", "NSE India market news", "BSE India market news"]},
+    {"id": "rbi-finance", "name": "RBI & Indian Finance", "queries": ["RBI latest", "Indian banking news", "Indian economy latest"]},
+    {"id": "stocks", "name": "Stocks & Companies", "queries": ["Indian stocks results", "NSE corporate announcements", "Indian company earnings"]},
+    {"id": "tech-ai", "name": "Technology & AI", "queries": ["AI technology India", "technology news India", "AI latest news"]},
+    {"id": "gujarat-business", "name": "Gujarat Business", "queries": ["Gujarat business news", "Gujarat MSME news", "Gujarat government business schemes"]},
+    {"id": "crypto", "name": "Crypto & Digital Assets", "queries": ["Bitcoin latest", "crypto market latest"]}
+  ],
+  "sources": {
+    "google_news_rss": true,
+    "official_domains": [
+      "rbi.org.in",
+      "sebi.gov.in",
+      "nseindia.com",
+      "bseindia.com",
+      "pib.gov.in",
+      "meity.gov.in"
+    ],
+    "market_data": true
+  },
+  "editorial": {
+    "original_summary_only": true,
+    "cite_sources": true,
+    "no_article_copying": true,
+    "no_fake_prices": true,
+    "no_unverified_claims": true,
+    "no_artificial_traffic": true,
+    "no_ad_click_manipulation": true
+  }
+}
