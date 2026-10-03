@@ -5,7 +5,8 @@ Modern Blogger publication platform for Gujarat, India, with a source-backed res
 ## v2 phase
 
 - Mobile-first Blogger theme with search, dark mode, categories and responsive article cards.
-- Research -> local Qwen draft -> source metadata -> quality gate -> optional Blogger publishing.
+- Research -> local Qwen draft -> SEO metadata -> quality gate -> optional Blogger publishing.
+- SEO layer creates concise titles, meta descriptions, natural keywords, clean slugs and source-aware metadata without keyword stuffing.
 - 12-hour cadence by default; one article per cycle.
 - Publishing remains disabled unless PUBLISH_ENABLED=true and valid Blogger OAuth credentials are supplied.
 - Quality gate blocks short/empty articles, missing sources and several unsafe promotional claims.

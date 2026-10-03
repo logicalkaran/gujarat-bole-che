@@ -28,6 +28,12 @@
     ],
     "market_data": true
   },
+  "seo": {
+    "enabled": true,
+    "max_title_chars": 60,
+    "max_description_chars": 155,
+    "keyword_stuffing": false
+  },
   "editorial": {
     "original_summary_only": true,
     "cite_sources": true,

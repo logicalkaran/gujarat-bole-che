@@ -10,6 +10,7 @@ from pathlib import Path
 from urllib.parse import quote
 import requests
 import xml.etree.ElementTree as ET
+from seo_optimizer import optimize
 
 ROOT = Path(__file__).resolve().parent
 CONFIG = json.loads((ROOT / "auto_config.json").read_text(encoding="utf-8"))
@@ -63,7 +64,8 @@ Time: {datetime.now(timezone.utc).isoformat()}
 Market data: {json.dumps(market)}
 Research sources: {json.dumps(articles)}
 Do not copy source wording. Do not invent facts. Clearly label market data.
-Use a headline, introduction, H2 sections, useful bullets and a Sources section.
+Use one clear search-intent headline, an informative introduction, H2 sections, useful bullets and a Sources section.
+Keep the headline concise, avoid keyword stuffing, use natural topic terms, and add useful original context rather than repeating source text.
 Mention that market prices can change and this is not investment advice.
 Return only HTML."""
     base = CONFIG["local_llm"]["base_url"].rstrip("/")
@@ -136,7 +138,8 @@ def run_once():
         generation_mode = "fallback"
 
     now = datetime.now(timezone.utc)
-    slug = re.sub(r"[^a-z0-9]+", "-", topic["name"].lower()).strip("-")
+    seo = optimize(topic["name"], body, articles)
+    slug = seo["slug"] or re.sub(r"[^a-z0-9]+", "-", topic["name"].lower()).strip("-")
     path = OUT / f"{now.strftime('%Y%m%dT%H%M%SZ')}-{slug}.html"
     path.write_text(body, encoding="utf-8")
     path.with_suffix(".json").write_text(
@@ -147,6 +150,7 @@ def run_once():
                 "generation_mode": generation_mode,
                 "sources": articles,
                 "market": market,
+                "seo": seo,
                 "publish_status": "dry_run" if CONFIG["dry_run"] else "pending_blogger",
             },
             indent=2,
@@ -154,7 +158,7 @@ def run_once():
         ),
         encoding="utf-8",
     )
-    print(json.dumps({"article": str(path), "sources": len(articles), "mode": generation_mode}, indent=2))
+    print(json.dumps({"article": str(path), "sources": len(articles), "mode": generation_mode, "seo": seo}, indent=2))
 
 
 if __name__ == "__main__":

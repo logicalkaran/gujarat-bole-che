@@ -17,7 +17,8 @@ while true; do
  latest="$(ls -t "$ROOT/automation/generated/"*.html 2>/dev/null | head -1 || true)"
  if [ -n "$latest" ] && python "$ROOT/automation/quality_gate.py" "$latest" >> "$LOG" 2>&1; then
   if env | grep -q "^PUBLISH_ENABLED=true$" && env | grep -q "^GOOGLE_REFRESH_TOKEN=."; then
-   title="$(basename "$latest" .html | sed 's/^[0-9TZ-]*-//' | tr '-' ' ')"
+   title="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["seo"]["title"])' "${latest%.html}.json" 2>/dev/null || true)"
+   [ -n "$title" ] || title="$(basename "$latest" .html | sed 's/^[0-9TZ-]*-//' | tr '-' ' ')"
    python "$ROOT/automation/publish_blogger.py" "$latest" "$title" >> "$LOG" 2>&1 || echo "[$(date -Is)] Blogger publish failed" >> "$LOG"
   else
    echo "[$(date -Is)] publishing disabled; quality-approved article kept locally" >> "$LOG"

@@ -21,7 +21,13 @@ def check(path):
  if not meta.is_file(): errors.append("source metadata file missing")
  else:
   try:
-   if not json.loads(meta.read_text(encoding="utf-8")).get("sources"): errors.append("metadata contains no sources")
+   data=json.loads(meta.read_text(encoding="utf-8"))
+   if not data.get("sources"): errors.append("metadata contains no sources")
+   seo=data.get("seo",{})
+   if not seo.get("title"): errors.append("SEO title missing")
+   elif len(seo["title"])>60: errors.append("SEO title exceeds 60 characters")
+   if not seo.get("description"): errors.append("SEO description missing")
+   if not seo.get("keywords"): errors.append("SEO keywords missing")
   except Exception as e: errors.append("invalid metadata: "+str(e))
  return not errors,errors
 if __name__=="__main__":
